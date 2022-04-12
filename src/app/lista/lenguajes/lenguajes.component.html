@@ -1,0 +1,33 @@
+<h2>Este es el componente hijo..</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <div class="coltitle">
+            Lista de Lenguajes
+            <hr>
+        </div>
+        <div class="colcontenido">
+            <ul>
+                <li *ngFor="let item of lenguaje">
+                    {{item.nombreLenguaje}}-{{item.descripcionLenguaje}}
+                </li>
+             
+            </ul>
+        </div>
+    </div>
+    <div class="col">
+        <div class="coltitle">
+            Formulario de Lenguajes
+            <hr>
+        </div>
+        <div class="colcontenido">
+                <form (ngSubmit)="agregar()">
+                    <input type="text" [(ngModel)]="nuevoLenguaje.nombreLenguaje" name="nombreLenguaje" placeholder="nuevo lenguaje">
+                    <input type="text" [(ngModel)]="nuevoLenguaje.descripcionLenguaje" name="descripcionLenguaje" placeholder="descripcion">
+                    <br>
+                    <button>Agregar</button>
+                </form>
+
+        </div>
+    </div>
+</div>
